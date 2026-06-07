@@ -15,30 +15,75 @@
             --text-main: #ffffff;
             --text-muted: #aaaaaa;
         }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--dark-bg);
             color: var(--text-main);
             margin: 0;
             padding: 15px;
+            padding-bottom: 40px;
         }
-        .header { text-align: center; padding: 20px 0; border-bottom: 1px solid #333; margin-bottom: 25px; }
+
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #333;
+            margin-bottom: 25px;
+        }
+
         .header h1 { margin: 0; font-size: 26px; }
         .header p { margin: 5px 0 0 0; color: var(--text-muted); font-size: 14px; }
-        .grid-container { display: flex; flex-direction: column; gap: 20px; max-width: 480px; margin: 0 auto; }
-        .app-card { background: var(--card-bg); border-radius: 14px; padding: 20px; border-top: 5px solid #666; }
+
+        .grid-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .app-card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            border-top: 5px solid #666;
+        }
+
         .app-card h2 { margin: 0 0 8px 0; font-size: 20px; }
         .app-card p { margin: 0 0 20px 0; font-size: 14px; color: var(--text-muted); line-height: 1.4; }
-        .btn { display: block; width: 100%; padding: 16px; color: white !important; text-align: center; text-decoration: none !important; border-radius: 8px; font-weight: bold; font-size: 18px; box-sizing: border-box; }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            color: white !important;
+            text-align: center;
+            text-decoration: none !important;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 18px;
+            border: none;
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn:active { opacity: 0.8; }
+
         .mod-start { border-top-color: var(--start-day-color); }
         .mod-start h2 { color: var(--start-day-color); }
         .mod-start .btn { background-color: var(--start-day-color); }
+
         .mod-check { border-top-color: var(--run-check-color); }
         .mod-check h2 { color: var(--run-check-color); }
         .mod-check .btn { background-color: var(--run-check-color); color: #000 !important; }
+
         .mod-powra { border-top-color: var(--powra-color); }
         .mod-powra h2 { color: var(--powra-color); }
         .mod-powra .btn { background-color: var(--powra-color); }
+
         .mod-wtn { border-top-color: var(--wtn-color); }
         .mod-wtn h2 { color: var(--wtn-color); }
         .mod-wtn .btn { background-color: var(--wtn-color); }
@@ -56,25 +101,25 @@
         <div class="app-card mod-start">
             <h2>🟢 1. Start Day</h2>
             <p>Initialize shift tracking, record opening odometer values, and submit duty declaration.</p>
-            <a href="PASTE_YOUR_START_DAY_FORM_URL_HERE" class="btn" target="_blank">Start Shift</a>
+            <a href="https://script.google.com/macros/s/AKfycbygcZBd8GBRJDzJmWioqHgYXPbubYLQ8cps9lL4KYUYdRjY_rv8dGecwaVg6Lvtqn6N/exec?module=start_day" class="btn">Start Shift</a>
         </div>
 
         <div class="app-card mod-check">
             <h2>🟡 2. Run Check</h2>
             <p>Execute mandatory pre-use walkaround vehicle safety checklist and report structural defects.</p>
-            <a href="PASTE_YOUR_RUN_CHECK_FORM_URL_HERE" class="btn" target="_blank">Begin Run Check</a>
+            <a href="https://script.google.com/macros/s/AKfycbygcZBd8GBRJDzJmWioqHgYXPbubYLQ8cps9lL4KYUYdRjY_rv8dGecwaVg6Lvtqn6N/exec?module=run_check" class="btn">Begin Run Check</a>
         </div>
 
         <div class="app-card mod-powra">
             <h2>🔴 3. Arrive on Site POWRA</h2>
             <p>Point of Work Risk Assessment. Analyze structural hazards, ground stability, and overhead lines before operations.</p>
-            <a href="PASTE_YOUR_POWRA_FORM_URL_HERE" class="btn" target="_blank">Launch POWRA Assessment</a>
+            <a href="https://script.google.com/macros/s/AKfycbygcZBd8GBRJDzJmWioqHgYXPbubYLQ8cps9lL4KYUYdRjY_rv8dGecwaVg6Lvtqn6N/exec?module=powra" class="btn">Launch POWRA Assessment</a>
         </div>
 
         <div class="app-card mod-wtn">
             <h2>🔵 4. Tipping WTN</h2>
             <p>Generate electronic Waste Transfer Notes. Log materials, weight allocations, and receiver digital signature.</p>
-            <a href="PASTE_YOUR_WTN_FORM_URL_HERE" class="btn" target="_blank">Create Waste Note</a>
+            <a href="https://script.google.com/macros/s/AKfycbygcZBd8GBRJDzJmWioqHgYXPbubYLQ8cps9lL4KYUYdRjY_rv8dGecwaVg6Lvtqn6N/exec?module=wtn" class="btn">Create Waste Note</a>
         </div>
 
     </div>
