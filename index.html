@@ -54,22 +54,24 @@
         .app-card h2 { margin: 0 0 8px 0; font-size: 20px; }
         .app-card p { margin: 0 0 20px 0; font-size: 14px; color: var(--text-muted); line-height: 1.4; }
 
+        /* Turned the dead link into a real clickable block button */
         .btn {
             display: block;
             width: 100%;
-            padding: 14px;
-            color: white;
+            padding: 16px;
+            color: white !important;
             text-align: center;
-            text-decoration: none;
+            text-decoration: none !important;
             border-radius: 8px;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 18px;
             border: none;
             box-sizing: border-box;
-            transition: opacity 0.2s, transform 0.1s;
+            cursor: pointer;
+            transition: background 0.2s;
         }
 
-        .btn:active { transform: scale(0.97); opacity: 0.9; }
+        .btn:active { opacity: 0.8; }
 
         .mod-start { border-top-color: var(--start-day-color); }
         .mod-start h2 { color: var(--start-day-color); }
@@ -77,7 +79,7 @@
 
         .mod-check { border-top-color: var(--run-check-color); }
         .mod-check h2 { color: var(--run-check-color); }
-        .mod-check .btn { background-color: var(--run-check-color); color: #000; }
+        .mod-check .btn { background-color: var(--run-check-color); color: #000 !important; }
 
         .mod-powra { border-top-color: var(--powra-color); }
         .mod-powra h2 { color: var(--powra-color); }
@@ -97,28 +99,32 @@
 
     <div class="grid-container">
 
+        <!-- 1. START DAY -->
         <div class="app-card mod-start">
             <h2>🟢 1. Start Day</h2>
             <p>Initialize shift tracking, record opening odometer values, and submit duty declaration.</p>
-            <a href="https://script.google.com/macros/s/AKfycby8mol8qxhhouaFsYdLFOo1FP38543nswAVOGZaN1DJKKAGeyBRs2uO024nyWJtUDKm/exec?module=start_day" class="btn" target="_self">Start Shift</a>
+            <a href="https://script.google.com/macros/s/AKfycby8mol8qxhhouaFsYdLFOo1FP38543nswAVOGZaN1DJKKAGeyBRs2uO024nyWJtUDKm/exec?module=start_day" class="btn">Start Shift</a>
         </div>
 
+        <!-- 2. RUN CHECK -->
         <div class="app-card mod-check">
             <h2>🟡 2. Run Check</h2>
             <p>Execute mandatory pre-use walkaround vehicle safety checklist and report structural defects.</p>
-            <a href="https://script.google.com/macros/s/AKfycby8mol8qxhhouaFsYdLFOo1FP38543nswAVOGZaN1DJKKAGeyBRs2uO024nyWJtUDKm/exec?module=run_check" class="btn" target="_self">Begin Run Check</a>
+            <a href="https://script.google.com/macros/s/AKfycby8mol8qxhhouaFsYdLFOo1FP38543nswAVOGZaN1DJKKAGeyBRs2uO024nyWJtUDKm/exec?module=run_check" class="btn">Begin Run Check</a>
         </div>
 
+        <!-- 3. ARRIVE ON SITE POWRA -->
         <div class="app-card mod-powra">
             <h2>🔴 3. Arrive on Site POWRA</h2>
             <p>Point of Work Risk Assessment. Analyze structural hazards, ground stability, and overhead lines before operations.</p>
-            <a href="https://script.google.com/macros/s/AKfycby8mol8qxhhouaFsYdLFOo1FP38543nswAVOGZaN1DJKKAGeyBRs2uO024nyWJtUDKm/exec?module=powra" class="btn" target="_self">Launch POWRA Assessment</a>
+            <a href="https://script.google.com/macros/s/AKfycby8mol8qxhhouaFsYdLFOo1FP38543nswAVOGZaN1DJKKAGeyBRs2uO024nyWJtUDKm/exec?module=powra" class="btn">Launch POWRA Assessment</a>
         </div>
 
+        <!-- 4. TIPPING WTN -->
         <div class="app-card mod-wtn">
             <h2>🔵 4. Tipping WTN</h2>
             <p>Generate electronic Waste Transfer Notes. Log materials, weight allocations, and receiver digital signature.</p>
-            <a href="https://script.google.com/macros/s/AKfycby8mol8qxhhouaFsYdLFOo1FP38543nswAVOGZaN1DJKKAGeyBRs2uO024nyWJtUDKm/exec?module=wtn" class="btn" target="_self">Create Waste Note</a>
+            <a href="https://script.google.com/macros/s/AKfycby8mol8qxhhouaFsYdLFOo1FP38543nswAVOGZaN1DJKKAGeyBRs2uO024nyWJtUDKm/exec?module=wtn" class="btn">Create Waste Note</a>
         </div>
 
     </div>
